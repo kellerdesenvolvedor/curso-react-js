@@ -1,0 +1,54 @@
+import React from 'react';
+
+const Equipe = (props) => {
+
+    return(
+
+        <div>
+            <Sobre nome={props.nome} cargo={props.cargo} idade={props.idade}/>
+            <Social facebook={props.facebook} linkedin={props.linkedin} youtuber={props.youtuber}/>
+            <hr/>
+        </div>
+    );
+
+}
+
+const Sobre = (props) =>{
+
+    return(
+
+        <div>
+            <h2>Olá sou o  {props.nome}!</h2>
+            <h3>Cargo: {props.cargo}</h3>
+            <h3>Idade: {props.idade} Anos.</h3>
+        </div>
+    );
+
+}
+const Social = (props) =>{
+
+    return(
+        <div>
+            <a href={props.facebook}> Facebook</a>
+            <a href={props.linkedin}> Linkedin</a>
+            <a href={props.youtuber}> Youtuber</a>
+        </div>
+
+    );
+}
+
+function App(){
+    return (
+    <div>   
+        <h1>Conheça Nossa Equipe!</h1>
+        <Equipe nome = "Lucas" cargo = "Programador" idade = "30" 
+        facebook = "https:www.google.com"  linkedin = "https: linkedin.com" youtuber = "http:www.youtuber.com" /> 
+        <Equipe nome = "Matheus" cargo = "Analista de Desenvolvimento" idade = "25"
+        facebook = "https:www.google.com"  linkedin = "https: linkedin.com" youtuber = "http:www.youtuber.com" />
+        <Equipe nome = "Amanda" cargo = "Front-end" idade = "25" 
+        facebook = "https:www.google.com"  linkedin = "https: linkedin.com" youtuber = "http:www.youtuber.com" />
+    </div>
+    );
+}
+
+export default App;
